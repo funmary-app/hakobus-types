@@ -1,0 +1,7 @@
+extends:
+  - recommended
+rules:
+  # サーバーの URL は仮のもの。実際の URL は、実装ごとに違う
+  no-server-example.com: off
+  # この API には、断られるような入力がない
+  operation-4xx-response: off

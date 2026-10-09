@@ -1,0 +1,6 @@
+# 改行は LF にそろえる
+* text=auto eol=lf
+
+# YAML は、GitHub の言語の表示から外れやすいので、検出の対象にする
+*.yaml linguist-detectable=true
+*.yml linguist-detectable=true
