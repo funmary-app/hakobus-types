@@ -1,6 +1,6 @@
 # hakobus-types
 
-バスの時刻表を返す、読み取り専用の小さな API の OpenAPI の定義です。[Funmary](https://github.com/funmary-app/funmary) は、この定義を実装したサーバーの基底 URL を渡すと、「バス」のタブを出せます。
+バス停ごとの発車表を返す、読み取り専用の小さな API の OpenAPI の定義です。[Funmary](https://github.com/funmary-app/funmary) は、この定義を実装したサーバーの基底 URL を渡すと、「バス」のタブを出せます。
 
 このリポジトリにあるのは定義だけです。サーバーも、データも、取得の処理も入っていません。
 
@@ -8,7 +8,8 @@
 
 - [openapi.yaml](openapi.yaml)
 - `GET /health`: サーバーが動いているか
-- `GET /v1/timetable`: すべての停留所、系統、運行日、便。形は GTFS-JP に合わせてある
+- `GET /v1/stops`: 停留所の一覧と、ダイヤの版の一覧
+- `GET /v1/stops/{stopId}`: 1 つの停留所の発車表(のりばと、平日、土日祝ごと)
 
 ## 実装するとき
 
